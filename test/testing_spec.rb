@@ -14,7 +14,7 @@ describe "Testing" do
       after_invoice_payment_succeeded! { |target, event| @event, @target = event, target }
     end
   end
-  
+
   after do
     ::Stripe::Callbacks.clear_callbacks!
     StripeMock.stop

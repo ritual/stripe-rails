@@ -4,7 +4,7 @@ module Stripe
     respond_to :json
 
     def create
-      @event = dispatch_stripe_event params
+      @event = dispatch_stripe_event request
       respond_with @event, :location => nil
     end
   end
